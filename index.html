@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marques e Salzano — Advocacia Trabalhista | Defesa dos Direitos do Trabalhador</title>
+<meta name="description" content="Demissão irregular, verbas não pagas, FGTS em atraso, horas extras, acidente de trabalho ou trabalho sem carteira? Fale com um advogado trabalhista. Análise individual, sigilosa e responsável.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0908;
+  --bg-2:#0e0d0a;
+  --bg-3:#131109;
+  --bg-card:#151310;
+  --bg-card-2:#1a1710;
+  --gold:#c8a862;
+  --gold-soft:#dcc488;
+  --gold-bright:#f2e2ad;
+  --gold-deep:#9c7c37;
+  --text:#e9e3d5;
+  --text-mut:#a49b87;
+  --head:#f6f0e2;
+  --line:rgba(200,168,98,.24);
+  --line-soft:rgba(200,168,98,.14);
+  --shadow:0 30px 70px -26px rgba(0,0,0,.85);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+.gold-text{color:var(--gold-soft)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.75}
+.eyebrow.center::after{content:"";width:26px;height:1px;background:var(--gold);opacity:.75}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:'Manrope';font-weight:700;font-size:1rem;
+  padding:1rem 1.7rem;border-radius:999px;cursor:pointer;border:none;
+  transition:transform .18s ease,box-shadow .25s ease,filter .25s ease;
+  letter-spacing:.01em;
+}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:linear-gradient(180deg,var(--gold-bright),var(--gold) 60%,var(--gold-deep));color:#1a1305;box-shadow:0 16px 34px -14px rgba(200,168,98,.6),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-gold:hover{transform:translateY(-3px);filter:brightness(1.06)}
+.btn-outline{background:transparent;color:var(--gold-soft);border:1px solid var(--line)}
+.btn-outline:hover{background:rgba(200,168,98,.08);transform:translateY(-2px);border-color:var(--gold)}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,9,8,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line-soft);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand .mark{height:46px;width:auto;display:block;filter:drop-shadow(0 0 10px rgba(200,168,98,.35))}
+.brand-txt{display:flex;flex-direction:column;line-height:1}
+.brand-txt .n{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;letter-spacing:.05em;color:var(--gold-soft)}
+.brand-txt .s{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text-mut);margin-top:.3rem;font-weight:600}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:#c9c1af;font-size:.9rem;font-weight:600;transition:color .2s}
+.nav-links a:hover{color:var(--gold-soft)}
+.nav .btn{padding:.68rem 1.2rem;font-size:.85rem}
+
+/* ---------- Emblem (monograma) ---------- */
+.emblem{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.2rem}
+.emblem img{width:100%;max-width:420px;height:auto;display:block}
+/* CSS gold monogram (sem fundo) */
+.mono{font-family:'Playfair Display',serif;font-weight:600;line-height:.9;letter-spacing:-.08em;
+  background:linear-gradient(155deg,#f6e7b4 0%,#e2c983 30%,#c8a862 55%,#9c7c37 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;
+  text-shadow:0 2px 18px rgba(200,168,98,.12)}
+.mono.sm{font-size:2.5rem}
+.mono.lg{font-size:clamp(6rem,12vw,8.6rem);filter:drop-shadow(0 6px 26px rgba(200,168,98,.22))}
+.emblem .mono.lg{margin-bottom:.1rem}
+.emblem .wordmark{margin-top:-.4rem}
+.wordmark .wm-main{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:.16em;color:var(--gold-soft);font-size:clamp(1.1rem,2vw,1.5rem);text-transform:uppercase}
+.wordmark .wm-sub{font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:var(--text-mut);margin-top:.5rem;font-weight:600}
+.wordmark .wm-rule{width:64px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:.7rem auto .55rem}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:radial-gradient(900px 520px at 50% -8%,rgba(200,168,98,.10),transparent 60%),var(--bg);color:var(--text);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.2rem;align-items:center;padding:4.4rem 0 4.8rem;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.15rem,4.6vw,3.5rem);color:var(--head);margin:1.2rem 0 1.3rem}
+.hero h1 .hl{color:var(--gold-soft);font-style:italic}
+.hero .lead{font-size:clamp(1.02rem,1.5vw,1.16rem);color:#c8c0ad;max-width:36rem}
+.hero .lead b{color:var(--head);font-weight:700}
+.hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.hero-trust{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:2.3rem;padding-top:1.6rem;border-top:1px solid var(--line-soft)}
+.hero-trust div{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text-mut);font-weight:600}
+.hero-trust svg{width:17px;height:17px;color:var(--gold)}
+.hero-emblem img{filter:drop-shadow(0 0 30px rgba(200,168,98,.28))}
+.anim{opacity:0;transform:translateY(22px);animation:rise .7s ease-out forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.32s}.d4{animation-delay:.46s}
+
+/* ---------- Section shells ---------- */
+section{position:relative}
+.sec{padding:5rem 0}
+.divider-top{border-top:1px solid var(--line-soft)}
+.sec-head{max-width:44rem;margin-bottom:3rem}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.7rem);margin:.9rem 0 .8rem;color:var(--head)}
+.sec-head p{color:var(--text-mut);font-size:1.05rem}
+
+/* ---------- Problemas ---------- */
+.problems{background:var(--bg-2)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.card{
+  background:linear-gradient(180deg,var(--bg-card),#100e0b);
+  border:1px solid var(--line-soft);border-radius:15px;padding:1.6rem 1.4rem;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s;
+  position:relative;overflow:hidden;
+}
+.card::before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:linear-gradient(var(--gold-bright),var(--gold-deep));transform:scaleY(0);transform-origin:top;transition:transform .3s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 26px 46px -28px rgba(0,0,0,.8);border-color:var(--line)}
+.card:hover::before{transform:scaleY(1)}
+.ico{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,rgba(200,168,98,.22),rgba(200,168,98,.05));border:1px solid var(--line-soft);margin-bottom:1rem}
+.ico svg{width:23px;height:23px;color:var(--gold-soft)}
+.card h3{font-size:1.12rem;color:var(--head);margin-bottom:.4rem;font-weight:600}
+.card p{font-size:.9rem;color:var(--text-mut);line-height:1.5}
+
+/* ---------- Alerta ---------- */
+.alert{background:radial-gradient(700px 460px at 82% 20%,rgba(200,168,98,.12),transparent 60%),var(--bg-3);overflow:hidden;position:relative;border-block:1px solid var(--line-soft)}
+.alert-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.alert h2{font-size:clamp(1.7rem,3.3vw,2.5rem);color:var(--head);margin:.9rem 0 1.1rem}
+.alert p{color:#cbc2ad;font-size:1.06rem;max-width:34rem}
+.alert-points{display:flex;flex-direction:column;gap:1rem}
+.apoint{display:flex;gap:1rem;background:linear-gradient(180deg,rgba(200,168,98,.06),rgba(200,168,98,.02));border:1px solid var(--line);border-radius:13px;padding:1.15rem 1.25rem}
+.apoint svg{width:26px;height:26px;color:var(--gold-soft);flex:none}
+.apoint b{display:block;color:var(--head);font-size:1rem;margin-bottom:.15rem}
+.apoint span{font-size:.9rem;color:var(--text-mut)}
+.alert-cta{margin-top:2rem}
+
+/* ---------- Atendimento ---------- */
+.serve{background:var(--bg);position:relative}
+.serve::after{content:"";position:absolute;inset:0;background:radial-gradient(800px 460px at 50% 0%,rgba(200,168,98,.08),transparent 55%);pointer-events:none}
+.serve .wrap{position:relative;z-index:2}
+.serve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.scard{background:linear-gradient(180deg,var(--bg-card-2),#120f0a);border:1px solid var(--line-soft);border-radius:14px;padding:1.7rem 1.4rem;transition:border-color .25s,transform .25s}
+.scard:hover{border-color:var(--gold);transform:translateY(-4px)}
+.scard .ico{background:linear-gradient(160deg,var(--gold-bright),var(--gold-deep));border:none}
+.scard .ico svg{color:#1a1305}
+.scard h3{color:var(--head);font-size:1.14rem;margin-bottom:.45rem}
+.scard p{color:var(--text-mut);font-size:.9rem}
+.serve-note{margin-top:2.4rem;text-align:center;font-size:.92rem;color:var(--text-mut);font-style:italic}
+
+/* ---------- Sobre ---------- */
+.about{background:var(--bg-2);border-top:1px solid var(--line-soft)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.4rem;align-items:center}
+.about h2{font-size:clamp(1.7rem,3.2vw,2.4rem);color:var(--head);margin:.9rem 0 1.1rem}
+.about p{color:var(--text-mut);font-size:1.07rem;margin-bottom:1rem}
+.about .quote{border-left:3px solid var(--gold);padding-left:1.2rem;color:var(--text);font-family:'Playfair Display',serif;font-style:italic;font-size:1.18rem;line-height:1.5}
+.about-badges{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:1.6rem}
+.about-badges div{font-size:.85rem;color:var(--text-mut);font-weight:600;display:flex;align-items:center;gap:.45rem}
+.about-badges svg{width:16px;height:16px;color:var(--gold)}
+.about-emblem{display:grid;place-items:center}
+.about-emblem img{filter:drop-shadow(0 0 26px rgba(200,168,98,.25))}
+
+/* ---------- CTA final ---------- */
+.final{background:radial-gradient(760px 520px at 50% 120%,rgba(200,168,98,.14),transparent 60%),var(--bg);text-align:center;overflow:hidden;position:relative;border-top:1px solid var(--line-soft)}
+.final .wrap{position:relative;z-index:2;padding:5.4rem 0}
+.final h2{font-size:clamp(2rem,4vw,3rem);color:var(--head);max-width:26ch;margin:1rem auto 1.1rem}
+.final h2 .hl{color:var(--gold-soft);font-style:italic}
+.final p{color:#c8c0ad;max-width:40rem;margin:0 auto 2.2rem;font-size:1.08rem}
+.final .btn-gold{font-size:1.08rem;padding:1.15rem 2.2rem}
+.final-sub{margin-top:1.3rem;font-size:.85rem;color:var(--text-mut)}
+
+/* ---------- Footer ---------- */
+footer{background:#070605;color:var(--text-mut);padding:3.2rem 0 2rem;border-top:1px solid var(--line-soft)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.4rem;align-items:start}
+.foot-brand .brand{margin-bottom:1rem}
+.foot-brand p{font-size:.9rem;max-width:24rem;line-height:1.6}
+.foot h4{color:var(--gold-soft);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem;font-weight:700}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.foot li{font-size:.9rem;display:flex;gap:.55rem;align-items:flex-start}
+.foot li svg{width:16px;height:16px;color:var(--gold);flex:none;margin-top:.2rem}
+.foot a:hover{color:var(--gold-soft)}
+.foot-bottom{margin-top:2.4rem;padding-top:1.5rem;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.78rem;color:#6f685a}
+.disclaimer{max-width:60rem;font-size:.76rem;color:#6f685a;line-height:1.6;margin-top:.8rem}
+
+/* ---------- Floating WA ---------- */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:80;display:flex;align-items:center;gap:.6rem;background:linear-gradient(180deg,var(--gold-bright),var(--gold) 60%,var(--gold-deep));color:#1a1305;padding:.85rem 1.25rem;border-radius:999px;font-weight:700;font-size:.92rem;box-shadow:0 16px 34px -12px rgba(200,168,98,.55),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .2s}
+.wa-float:hover{transform:translateY(-3px) scale(1.02)}
+.wa-float svg{width:22px;height:22px}
+.wa-float .lbl{white-space:nowrap}
+
+/* ---------- Responsive ---------- */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:2.2rem}
+  .hero-emblem{order:-1;max-width:420px;margin-inline:auto}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .serve-grid{grid-template-columns:repeat(2,1fr)}
+  .alert-grid,.about-grid{grid-template-columns:1fr;gap:2rem}
+  .nav-links{display:none}
+  .foot-grid{grid-template-columns:1fr;gap:1.8rem}
+}
+@media(max-width:560px){
+  .cards,.serve-grid{grid-template-columns:1fr}
+  .sec{padding:3.6rem 0}
+  .hero-grid{padding:2.6rem 0 3.2rem}
+  .wa-float .lbl{display:none}
+  .wa-float{padding:.9rem}
+  .nav .btn span{display:none}
+  .hero-trust{gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="brand" aria-label="Marques e Salzano Sociedade de Advogados">
+      <span class="mono sm" aria-hidden="true">MS</span>
+      <span class="brand-txt">
+        <span class="n">Marques e Salzano</span>
+        <span class="s">Sociedade de Advogados</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#problemas">Situações comuns</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#escritorio">O escritório</a>
+    </nav>
+    <a class="btn btn-gold" href="https://wa.me/5511991360684?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20advogado%20trabalhista%20sobre%20o%20meu%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.9 9.9 0 004.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11-.42-.14-.95-.31-1.64-.61-2.88-1.24-4.76-4.14-4.9-4.34-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1-2.4c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.29-.12.58.17.29.74 1.22 1.59 1.98 1.1.98 2.02 1.28 2.31 1.42.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.27.1 1.7.8 2 .95.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg><span>Fale no WhatsApp</span></a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow anim d1">Advocacia Trabalhista</span>
+      <h1 class="anim d2">Seus direitos trabalhistas podem ter sido <span class="hl">desrespeitados</span></h1>
+      <p class="lead anim d3">Situações como <b>demissão irregular</b>, <b>verbas não pagas</b>, <b>FGTS em atraso</b>, <b>horas extras</b>, <b>acidente de trabalho</b> ou <b>trabalho sem carteira assinada</b> merecem ser analisadas por um advogado antes que seja tarde.</p>
+      <div class="hero-cta anim d4">
+        <a class="btn btn-gold" href="https://wa.me/5511991360684?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20advogado%20trabalhista%20sobre%20o%20meu%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.9 9.9 0 004.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11-.42-.14-.95-.31-1.64-.61-2.88-1.24-4.76-4.14-4.9-4.34-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1-2.4c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.29-.12.58.17.29.74 1.22 1.59 1.98 1.1.98 2.02 1.28 2.31 1.42.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.27.1 1.7.8 2 .95.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>Fale com um advogado trabalhista</a>
+      </div>
+      <div class="hero-trust anim d4">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z"/></svg>Atendimento sigiloso</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Análise individual do caso</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Resposta rápida</div>
+      </div>
+    </div>
+    <div class="hero-emblem anim d3">
+      <div class="emblem">
+        <div class="mono lg" aria-hidden="true">MS</div>
+        <div class="wordmark">
+          <div class="wm-rule"></div>
+          <div class="wm-main">Marques e Salzano</div>
+          <div class="wm-sub">Sociedade de Advogados</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMAS -->
+<section class="sec problems" id="problemas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Situações que merecem atenção</span>
+      <h2>Você reconhece algum desses problemas?</h2>
+      <p>São situações comuns no dia a dia de trabalho — e todas podem envolver direitos que não foram respeitados.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-3 3-2-2"/></svg></div>
+        <h3>Demissão sem pagamento correto</h3>
+        <p>Você foi desligado e as contas não fecharam? O acerto pode estar incompleto.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M8 15h3"/></svg></div>
+        <h3>FGTS não depositado</h3>
+        <p>Depósitos do FGTS em atraso ou nunca feitos ao longo do contrato de trabalho.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Horas extras não pagas</h3>
+        <p>Você fazia horas além da jornada e elas nunca apareceram no contracheque.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></div>
+        <h3>Trabalho sem carteira assinada</h3>
+        <p>Registro que nunca foi feito, mesmo com vínculo, rotina e subordinação.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a4 4 0 014 4c0 2-1.5 3-2 5h-4c-.5-2-2-3-2-5a4 4 0 014-4z"/><path d="M9 20h6M10 22h4"/><path d="M5 13l-2 1M19 13l2 1"/></svg></div>
+        <h3>Assédio moral no trabalho</h3>
+        <p>Humilhações, pressão abusiva ou exposição constante no ambiente de trabalho.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 2a5 5 0 00-5 5c0 3 2 4 2 7h6c0-3 2-4 2-7a5 5 0 00-5-5z"/><path d="M8 20h8"/><path d="M4 9l-2-1M20 9l2-1"/></svg></div>
+        <h3>Acidente de trabalho</h3>
+        <p>Lesão ou afastamento por acidente — com reflexos em estabilidade e indenização.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>Verbas rescisórias incorretas</h3>
+        <p>Aviso prévio, férias, 13º ou multa do FGTS calculados de forma errada.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M12 11v0"/></svg></div>
+        <h3>Estabilidade e afastamento</h3>
+        <p>Gestante, acidente ou afastamento pelo INSS podem garantir estabilidade no emprego.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ALERTA -->
+<section class="sec alert">
+  <div class="wrap alert-grid">
+    <div>
+      <span class="eyebrow">Um alerta importante</span>
+      <h2>Muitos trabalhadores perdem seus direitos em silêncio</h2>
+      <p>Não é por falta de razão — é por falta de informação, por medo de represália ou por não saberem que ainda estão dentro do prazo para agir. O tempo, porém, corre contra quem espera.</p>
+      <div class="alert-cta">
+        <a class="btn btn-gold" href="https://wa.me/5511991360684?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20advogado%20trabalhista%20sobre%20o%20meu%20caso." target="_blank" rel="noopener">Verificar se meu caso ainda tem prazo</a>
+      </div>
+    </div>
+    <div class="alert-points">
+      <div class="apoint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+        <div><b>Falta de informação</b><span>Boa parte não sabe que teve um direito desrespeitado.</span></div>
+      </div>
+      <div class="apoint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l9 5v6c0 5-4 7-9 9-5-2-9-4-9-9V7l9-5z"/></svg>
+        <div><b>Medo de agir</b><span>Buscar seus direitos é legítimo — e pode ser feito com discrição.</span></div>
+      </div>
+      <div class="apoint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><b>Prazo que corre</b><span>Existem prazos legais. Uma análise a tempo evita a perda do direito.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATENDIMENTO -->
+<section class="sec serve" id="atendimento">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow center">Como é o atendimento</span>
+      <h2>Cada caso é analisado de forma individual</h2>
+      <p>Um atendimento técnico e responsável, feito para entender a sua situação específica — sem fórmulas prontas e sem promessas.</p>
+    </div>
+    <div class="serve-grid">
+      <div class="scard">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4a7 7 0 100 14 7 7 0 000-14z"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <h3>Análise individual</h3>
+        <p>Seu caso é estudado em detalhe, com base nos documentos e na sua história.</p>
+      </div>
+      <div class="scard">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
+        <h3>Sigilo total</h3>
+        <p>Tudo o que você compartilhar é tratado com confidencialidade e respeito.</p>
+      </div>
+      <div class="scard">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Postura ética</h3>
+        <p>Orientação clara e honesta, sem promessa de resultado ou de valores.</p>
+      </div>
+      <div class="scard">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>Linguagem clara</h3>
+        <p>Explicações simples sobre seus direitos e sobre os próximos passos possíveis.</p>
+      </div>
+    </div>
+    <p class="serve-note">O atendimento não substitui uma consulta formal e não garante qualquer resultado: seu objetivo é esclarecer, com responsabilidade, se houve alguma irregularidade.</p>
+  </div>
+</section>
+
+<!-- SOBRE O ESCRITÓRIO -->
+<section class="sec about" id="escritorio">
+  <div class="wrap about-grid">
+    <div class="about-emblem">
+      <div class="emblem">
+        <div class="mono lg" aria-hidden="true">MS</div>
+        <div class="wordmark">
+          <div class="wm-rule"></div>
+          <div class="wm-main">Marques e Salzano</div>
+          <div class="wm-sub">Sociedade de Advogados</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">O escritório</span>
+      <h2>Marques e Salzano — Sociedade de Advogados</h2>
+      <p class="quote">"Atuamos na orientação e defesa de trabalhadores em questões relacionadas ao Direito do Trabalho, buscando uma análise técnica e individualizada de cada situação."</p>
+      <p>O foco está em entender o que aconteceu no seu caso e traduzir isso em uma orientação segura e responsável — do primeiro contato até a compreensão dos seus direitos.</p>
+      <div class="about-badges">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z"/></svg>Foco no Direito do Trabalho</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Análise técnica de cada caso</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V10l7-5 7 5v11"/></svg>São Paulo — Vila Mariana</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow center">Não deixe para depois</span>
+    <h2>Será que houve alguma <span class="hl">irregularidade</span> no seu trabalho?</h2>
+    <p>Em poucos minutos de conversa é possível entender se algum direito seu foi desrespeitado — e o que pode ser feito a respeito. A análise é o primeiro passo.</p>
+    <a class="btn btn-gold" href="https://wa.me/5511991360684?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20advogado%20trabalhista%20sobre%20o%20meu%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.9 9.9 0 004.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11-.42-.14-.95-.31-1.64-.61-2.88-1.24-4.76-4.14-4.9-4.34-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1-2.4c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.29-.12.58.17.29.74 1.22 1.59 1.98 1.1.98 2.02 1.28 2.31 1.42.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.27.1 1.7.8 2 .95.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>Converse com um advogado trabalhista</a>
+    <p class="final-sub">Atendimento por WhatsApp • (11) 99136-0684</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#topo" class="brand">
+          <span class="mono sm" aria-hidden="true" style="font-size:2.7rem">MS</span>
+          <span class="brand-txt">
+            <span class="n">Marques e Salzano</span>
+            <span class="s">Sociedade de Advogados</span>
+          </span>
+        </a>
+        <p>Orientação e defesa de trabalhadores em questões de Direito do Trabalho, com análise técnica e individualizada de cada situação.</p>
+      </div>
+      <div class="foot">
+        <h4>Contato</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.9 9.9 0 004.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2z"/></svg><a href="https://wa.me/5511991360684?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20advogado%20trabalhista%20sobre%20o%20meu%20caso." target="_blank" rel="noopener">WhatsApp: (11) 99136-0684</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Atendimento com hora marcada</li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Endereço</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Rua Jorge Chammas, 280<br>Vila Mariana — São Paulo/SP<br>CEP 04016-070</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Este site tem caráter meramente informativo, em conformidade com o Código de Ética e Disciplina da OAB. O conteúdo não constitui oferta de serviços, captação de clientela ou promessa de resultado, tampouco garante qualquer valor de indenização. Cada caso depende de análise específica.</p>
+    <div class="foot-bottom">
+      <span>© 2026 Marques e Salzano Sociedade de Advogados. Todos os direitos reservados.</span>
+      <span>Direito do Trabalho • São Paulo</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="https://wa.me/5511991360684?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20advogado%20trabalhista%20sobre%20o%20meu%20caso." target="_blank" rel="noopener" aria-label="Fale no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.9 9.9 0 004.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11-.42-.14-.95-.31-1.64-.61-2.88-1.24-4.76-4.14-4.9-4.34-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1-2.4c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.29-.12.58.17.29.74 1.22 1.59 1.98 1.1.98 2.02 1.28 2.31 1.42.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.27.1 1.7.8 2 .95.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+  <span class="lbl">Fale no WhatsApp</span>
+</a>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.card,.scard,.apoint,.sec-head'));
+  var reveal=function(el){el.style.opacity=1;el.style.transform='none';};
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!('IntersectionObserver' in window)||reduce){els.forEach(reveal);return;}
+  els.forEach(function(el,i){
+    el.style.opacity=0;el.style.transform='translateY(24px)';
+    el.style.transition='opacity .6s ease '+(i%4*0.08)+'s, transform .6s ease '+(i%4*0.08)+'s';
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+  setTimeout(function(){els.forEach(reveal);},2500);
+})();
+</script>
+</body>
+</html>
